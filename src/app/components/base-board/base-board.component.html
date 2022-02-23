@@ -1,0 +1,26 @@
+<!-- <div class="triangle"></div>
+<div class="base-board-container">
+  <div class="base-board" [style.background-image]="backgroundImage">
+    <div class="slice" *ngFor="let participant of participants" [style.transform]="'translateX('+(100/participants.length)+'%) translateY(-'+(100/participants.length)+'%)'">
+      {{participant.name}}
+    </div>
+  </div>
+  <div class="bottle" #bottle [class.spin]="startSpin" [style.transform]="'rotate('+bottleAngle+')'">
+    Bottle
+  </div>
+</div> -->
+<div class="base-board-container">
+  <canvas id="participants-pie" #participantsPie></canvas>
+  <div
+    class="bottle"
+    #bottle
+    [class.spin]="startSpin"
+    [style.transform]="'rotate(' + bottleAngle + ')'"
+  >
+    <img src="https://img.icons8.com/color/96/000000/beer-bottle.png"/>
+  </div>
+</div>
+
+<!-- try with d3 for more customizable pie and bottle -->
+
+<button (click)="spinTheBottle()">Spin</button>
